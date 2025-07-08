@@ -1,7 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   // 1. Typing animation for <h1>
   const typedText = document.querySelector(".base h1 span");
-  const words = ["Abhi Sarkar", "Upcoming Data Analyst", "Enthusiast Web Developer", "AI Explorer"];
+  const words = [
+    "Abhi Sarkar",
+    "Upcoming Data Analyst",
+    "Enthusiast Web Developer",
+    "AI Explorer",
+  ];
   let wordIndex = 0;
   let charIndex = 0;
   let typing = true;
@@ -108,10 +113,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-const icons = document.querySelectorAll(".tools img, .language img");
+  const icons = document.querySelectorAll(".tools img, .language img");
 
-// Create tooltips and attach hover events
-icons.forEach((icon) => {
+  // Create tooltips and attach hover events
+  icons.forEach((icon) => {
     const tooltipText = icon.alt || "Technology"; // Use alt text as tooltip
     const tooltip = document.createElement("span");
     tooltip.className = "custom-tooltip";
@@ -120,35 +125,36 @@ icons.forEach((icon) => {
     icon.parentElement.appendChild(tooltip);
 
     icon.addEventListener("mouseenter", () => {
-     tooltip.style.opacity = 1;
-     tooltip.style.transform = "translateY(-10px)";
+      tooltip.style.opacity = 1;
+      tooltip.style.transform = "translateY(-10px)";
     });
 
     icon.addEventListener("mouseleave", () => {
-        tooltip.style.opacity = 0;
-        tooltip.style.transform = "translateY(0)";
+      tooltip.style.opacity = 0;
+      tooltip.style.transform = "translateY(0)";
     });
 
     // On click: show more info or modal (expandable behavior)
     icon.addEventListener("click", () => {
-        alert(`You clicked on ${tooltipText}`);
-        // You can enhance this with a modal or description popup
+      alert(`You clicked on ${tooltipText}`);
+      // You can enhance this with a modal or description popup
     });
-});
+  });
 
-    // Fade in on scroll (intersection observer)
-    const observer = new IntersectionObserver((entries) => {
+  // Fade in on scroll (intersection observer)
+  const observer = new IntersectionObserver(
+    (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("fade-in");
         }
       });
-    }, { threshold: 0.2 });
+    },
+    { threshold: 0.2 }
+  );
 
-    icons.forEach((icon) => {
-      icon.classList.add("fade-ready");
-      observer.observe(icon);
-    });
+  icons.forEach((icon) => {
+    icon.classList.add("fade-ready");
+    observer.observe(icon);
   });
-
-  
+});
