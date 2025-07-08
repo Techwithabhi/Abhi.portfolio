@@ -430,6 +430,7 @@ header {
   width: 50px;
   padding-bottom: 5px;
   transition: all 0.3s ease;
+  filter: drop-shadow(0px 0px 1 rgb(0, 0, 0));
 }
 
 .cv div img:hover {
@@ -459,7 +460,7 @@ button:hover {
   text-shadow: #00203f;
   /* color: #09ff00; */
   border: 0.1px solid #000000;
-  cursor: progress;
+  cursor: pointer;
 }
 
 /* starting project section */
@@ -729,7 +730,7 @@ button:hover {
     max-width: 500px;
     height: auto;
     margin-bottom: 20px;
-    /* margin-right: 1%; */
+    margin-right: 0.7%;
   }
 
   .left-box img {
@@ -751,8 +752,9 @@ button:hover {
     position: relative;
     z-index: 1;
     border-radius: 15px;
+    border: 3px solid black;
     /* padding: 1.5rem; */
-    /* margin-right: 1%; */
+    margin-right: 0.45%;
   }
 
   .right-box .container {
