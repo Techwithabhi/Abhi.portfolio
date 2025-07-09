@@ -311,7 +311,7 @@ header {
   transform: scale(1.1);
   background-color: #00fff7;
   color: #000000;
-  cursor: no-drop;
+  cursor: default;
 }
 
 @media only screen and (max-width: 401px) {
@@ -522,23 +522,33 @@ button:hover {
 .project1 .left-box {
   width: 600px;
   height: 600px;
-  flex-shrink: 0;
-  position: relative;
-  z-index: 1;
   position: sticky;
   top: 55px;
+  flex-shrink: 0;
 }
 
-.left-box img {
+.left-box .img-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 25px;
+  border: 3px solid #00fff7;
+  box-shadow: 0 0.1rem 0.2rem #00000033, 0 0.1rem 0.5rem #0000004d,
+              0 0.2rem 1.5rem #0000004d;
+}
+
+.img-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 25px;
-  border: 5px solid #000000;
-  box-shadow: 0 0.1rem 0.2rem #00000033, 0 0.1rem 0.5rem #0000004d,
-    0 0.2rem 1.5rem #0000004d;
+  transition: transform 2.5s ease;
 }
+
+.img-wrapper:hover img {
+  transform: scale(1.4);
+}
+
 
 #project .project1 .right-box {
   width: 90%;
