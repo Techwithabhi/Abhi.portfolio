@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 1. Typing animation for <h1>
   const typedText = document.querySelector(".base h1 span");
   const words = [
-    "Abhi Sarkar",
+    // "Abhi Sarkar",
     "Aspiring Data Analyst",
     "Junior Web Developer",
     "AI Explorer",
