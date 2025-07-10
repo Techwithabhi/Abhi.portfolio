@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const typedText = document.querySelector(".base h1 span");
   const words = [
     "Abhi Sarkar",
-    "Future-Focused Data Analyst",
-    "Proactive Web Development Learner",
+    "Aspiring Data Analyst",
+    "Junior Web Developer",
     "AI Explorer",
   ];
   let wordIndex = 0;
