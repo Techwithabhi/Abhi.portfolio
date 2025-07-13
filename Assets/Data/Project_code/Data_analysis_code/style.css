@@ -111,8 +111,9 @@ body {
 }
 
 .percentage {
-    width: 77%;
+    width: 75%;
     height: 15px;
+    margin-left: 2.2%;
     background-color: white;
     border: 1.2px solid black;
 }
@@ -188,7 +189,7 @@ body {
 }
 
 /* FOR FLEXIBILETY */
-@media only screen and (min-width: 550px) and (max-width: 1040px) {
+@media only screen and (min-width: 550px) and (max-width: 1100px) {
     .data-icon {
         flex-direction: column;
     }
