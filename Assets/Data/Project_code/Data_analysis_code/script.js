@@ -54,51 +54,51 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // =================== ANIMATED SKILL BARS ===================
-    // function animateSkillBars() {
-    //     const skillBars = document.querySelectorAll('.data-box');
+    function animateSkillBars() {
+        const skillBars = document.querySelectorAll('.data-box');
         
-    //     skillBars.forEach((bar, index) => {
-    //         // Initial state
-    //         bar.style.opacity = '0';
-    //         bar.style.transform = 'translateX(-50px)';
-    //         bar.style.transition = 'all 0.6s ease-out';
+        skillBars.forEach((bar, index) => {
+            // Initial state
+            bar.style.opacity = '0';
+            bar.style.transform = 'translateX(-50px)';
+            bar.style.transition = 'all 0.6s ease-out';
             
-    //         // Animate appearance
-    //         setTimeout(() => {
-    //             bar.style.opacity = '1';
-    //             bar.style.transform = 'translateX(0)';
-    //         }, 1200 + (index * 150));
+            // Animate appearance
+            setTimeout(() => {
+                bar.style.opacity = '1';
+                bar.style.transform = 'translateX(0)';
+            }, 1200 + (index * 150));
 
-    //         // Animate the progress bars
-    //         const leftBar = bar.querySelector('[class^="left"]');
-    //         const rightText = bar.querySelector('[class^="right"]');
+            // Animate the progress bars
+            const leftBar = bar.querySelector('[class^="left"]');
+            const rightText = bar.querySelector('[class^="right"]');
             
-    //         if (leftBar && rightText) {
-    //             const originalWidth = leftBar.style.width || getComputedStyle(leftBar).width;
-    //             leftBar.style.width = '0%';
-    //             leftBar.style.transition = 'width 1.5s ease-out';
+            if (leftBar && rightText) {
+                const originalWidth = leftBar.style.width || getComputedStyle(leftBar).width;
+                leftBar.style.width = '0%';
+                leftBar.style.transition = 'width 1.5s ease-out';
                 
-    //             setTimeout(() => {
-    //                 leftBar.style.width = originalWidth;
+                setTimeout(() => {
+                    leftBar.style.width = originalWidth;
                     
-    //                 // Animate percentage text
-    //                 const targetPercentage = parseInt(rightText.textContent);
-    //                 let currentPercentage = 0;
-    //                 const increment = targetPercentage / 60;
+                    // Animate percentage text
+                    const targetPercentage = parseInt(rightText.textContent);
+                    let currentPercentage = 0;
+                    const increment = targetPercentage / 60;
                     
-    //                 const countUp = setInterval(() => {
-    //                     currentPercentage += increment;
-    //                     if (currentPercentage >= targetPercentage) {
-    //                         currentPercentage = targetPercentage;
-    //                         clearInterval(countUp);
-    //                     }
-    //                     rightText.textContent = Math.round(currentPercentage) + '%';
-    //                 }, 25);
+                    const countUp = setInterval(() => {
+                        currentPercentage += increment;
+                        if (currentPercentage >= targetPercentage) {
+                            currentPercentage = targetPercentage;
+                            clearInterval(countUp);
+                        }
+                        rightText.textContent = Math.round(currentPercentage) + '%';
+                    }, 25);
                     
-    //             }, 1500 + (index * 150));
-    //         }
-    //     });
-    // }
+                }, 1500 + (index * 150));
+            }
+        });
+    }
 
     // // =================== INTERACTIVE EFFECTS ===================
     // function addInteractiveEffects() {
