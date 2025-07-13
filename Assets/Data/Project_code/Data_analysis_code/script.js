@@ -230,24 +230,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // // =================== DYNAMIC GRADIENT ANIMATION ===================
-    // function animateGradient() {
-    //     const container = document.querySelector('.container');
-    //     let hue = 0;
+    // =================== DYNAMIC GRADIENT ANIMATION ===================
+    function animateGradient() {
+        const container = document.querySelector('.container');
+        let hue = 0;
         
-    //     setInterval(() => {
-    //         hue = (hue + 1) % 360;
-    //         const gradient = `linear-gradient(
-    //             ${45 + Math.sin(hue * 0.01) * 15}deg,
-    //             hsl(${hue}, 50%, 40%),
-    //             hsl(${hue + 30}, 60%, 35%),
-    //             hsl(${hue + 60}, 70%, 45%),
-    //             hsl(${hue + 30}, 60%, 35%),
-    //             hsl(${hue}, 50%, 40%)
-    //         )`;
-    //         container.style.background = gradient;
-    //     }, 50);
-    // }
+        setInterval(() => {
+            hue = (hue + 1) % 360;
+            const gradient = `linear-gradient(
+                ${45 + Math.sin(hue * 0.01) * 15}deg,
+                hsl(${hue}, 50%, 40%),
+                hsl(${hue + 30}, 60%, 35%),
+                hsl(${hue + 60}, 70%, 45%),
+                hsl(${hue + 30}, 60%, 35%),
+                hsl(${hue}, 50%, 40%)
+            )`;
+            container.style.background = gradient;
+        }, 50);
+    }
 
     // // =================== PULSE EFFECT FOR ICONS ===================
     // function addPulseEffect() {
