@@ -100,63 +100,63 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // // =================== INTERACTIVE EFFECTS ===================
-    // function addInteractiveEffects() {
-    //     // Heading hover effect with color cycling
-    //     const heading = document.querySelector('.heading');
-    //     const colors = ['cyan', '#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#ffeaa7'];
-    //     let colorIndex = 0;
+    // =================== INTERACTIVE EFFECTS ===================
+    function addInteractiveEffects() {
+        // Heading hover effect with color cycling
+        const heading = document.querySelector('.heading');
+        const colors = ['cyan', '#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#ffeaa7'];
+        let colorIndex = 0;
         
-    //     heading.addEventListener('mouseenter', () => {
-    //         const currentColor = colors[colorIndex % colors.length];
-    //         heading.style.textShadow = `
-    //             0 0 10px ${currentColor},
-    //             0 0 20px ${currentColor},
-    //             0 0 40px ${currentColor},
-    //             0 0 80px ${currentColor}
-    //         `;
-    //         colorIndex++;
-    //     });
+        heading.addEventListener('mouseenter', () => {
+            const currentColor = colors[colorIndex % colors.length];
+            heading.style.textShadow = `
+                0 0 10px ${currentColor},
+                0 0 20px ${currentColor},
+                0 0 40px ${currentColor},
+                0 0 80px ${currentColor}
+            `;
+            colorIndex++;
+        });
 
-    //     // Skill bar hover effects
-    //     const dataBoxes = document.querySelectorAll('.data-box');
-    //     dataBoxes.forEach(box => {
-    //         const img = box.querySelector('img');
-    //         const percentage = box.querySelector('.percentage');
+        // Skill bar hover effects
+        const dataBoxes = document.querySelectorAll('.data-box');
+        dataBoxes.forEach(box => {
+            const img = box.querySelector('img');
+            const percentage = box.querySelector('.percentage');
             
-    //         box.addEventListener('mouseenter', () => {
-    //             img.style.transform = 'scale(1.2) rotate(5deg)';
-    //             img.style.transition = 'transform 0.3s ease';
-    //             percentage.style.transform = 'scale(1.05)';
-    //             percentage.style.transition = 'transform 0.3s ease';
-    //             percentage.style.boxShadow = '0 0 15px rgba(0,255,255,0.5)';
-    //         });
+            box.addEventListener('mouseenter', () => {
+                img.style.transform = 'scale(1.2) rotate(5deg)';
+                img.style.transition = 'transform 0.3s ease';
+                percentage.style.transform = 'scale(1.05)';
+                percentage.style.transition = 'transform 0.3s ease';
+                percentage.style.boxShadow = '0 0 15px rgba(0,255,255,0.5)';
+            });
 
-    //         box.addEventListener('mouseleave', () => {
-    //             img.style.transform = 'scale(1) rotate(0deg)';
-    //             percentage.style.transform = 'scale(1)';
-    //             percentage.style.boxShadow = 'none';
-    //         });
-    //     });
+            box.addEventListener('mouseleave', () => {
+                img.style.transform = 'scale(1) rotate(0deg)';
+                percentage.style.transform = 'scale(1)';
+                percentage.style.boxShadow = 'none';
+            });
+        });
 
-    //     // Enhanced button effects
-    //     const buttons = document.querySelectorAll('.custom-btn');
-    //     buttons.forEach(button => {
-    //         button.addEventListener('mouseenter', () => {
-    //             button.style.transform = 'scale(1.1) translateY(-5px)';
-    //             button.style.boxShadow = `
-    //                 0 0.2rem 0.4rem #00000033,
-    //                 0 0.2rem 1rem #0000004d,
-    //                 0 0.4rem 2rem #0000004d,
-    //                 0 0 20px rgba(59, 180, 73, 0.5)
-    //             `;
-    //         });
+        // Enhanced button effects
+        const buttons = document.querySelectorAll('.custom-btn');
+        buttons.forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                button.style.transform = 'scale(1.1) translateY(-5px)';
+                button.style.boxShadow = `
+                    0 0.2rem 0.4rem #00000033,
+                    0 0.2rem 1rem #0000004d,
+                    0 0.4rem 2rem #0000004d,
+                    0 0 20px rgba(59, 180, 73, 0.5)
+                `;
+            });
 
-    //         button.addEventListener('mouseleave', () => {
-    //             button.style.transform = 'scale(1) translateY(0)';
-    //         });
-    //     });
-    // }
+            button.addEventListener('mouseleave', () => {
+                button.style.transform = 'scale(1) translateY(0)';
+            });
+        });
+    }
 
     // // =================== PARTICLE BACKGROUND EFFECT ===================
     // function createParticleEffect() {
