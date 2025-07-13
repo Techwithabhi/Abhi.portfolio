@@ -249,55 +249,55 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 50);
     }
 
-    // // =================== PULSE EFFECT FOR ICONS ===================
-    // function addPulseEffect() {
-    //     const icons = document.querySelectorAll('.data-icon img');
+    // =================== PULSE EFFECT FOR ICONS ===================
+    function addPulseEffect() {
+        const icons = document.querySelectorAll('.data-icon img');
         
-    //     icons.forEach((icon, index) => {
-    //         setTimeout(() => {
-    //             icon.style.animation = 'pulse 2s infinite';
+        icons.forEach((icon, index) => {
+            setTimeout(() => {
+                icon.style.animation = 'pulse 2s infinite';
                 
-    //             // Add CSS animation if not already present
-    //             if (!document.getElementById('pulse-animation')) {
-    //                 const style = document.createElement('style');
-    //                 style.id = 'pulse-animation';
-    //                 style.textContent = `
-    //                     @keyframes pulse {
-    //                         0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
-    //                         70% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
-    //                         100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
-    //                     }
-    //                 `;
-    //                 document.head.appendChild(style);
-    //             }
-    //         }, index * 200);
-    //     });
-    // }
+                // Add CSS animation if not already present
+                if (!document.getElementById('pulse-animation')) {
+                    const style = document.createElement('style');
+                    style.id = 'pulse-animation';
+                    style.textContent = `
+                        @keyframes pulse {
+                            0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
+                            70% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
+                            100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+                        }
+                    `;
+                    document.head.appendChild(style);
+                }
+            }, index * 200);
+        });
+    }
 
-    // // =================== INITIALIZE ALL EFFECTS ===================
-    // function init() {
-    //     animateOnLoad();
-    //     setTimeout(animateSkillBars, 800);
-    //     setTimeout(addInteractiveEffects, 1000);
-    //     setTimeout(createParticleEffect, 1500);
-    //     setTimeout(animateGradient, 2000);
-    //     setTimeout(addPulseEffect, 2500);
-    //     setupScrollReveal();
-    // }
+    // =================== INITIALIZE ALL EFFECTS ===================
+    function init() {
+        animateOnLoad();
+        setTimeout(animateSkillBars, 800);
+        setTimeout(addInteractiveEffects, 1000);
+        setTimeout(createParticleEffect, 1500);
+        setTimeout(animateGradient, 2000);
+        setTimeout(addPulseEffect, 2500);
+        setupScrollReveal();
+    }
 
-    // // Start the magic!
-    // init();
+    // Start the magic!
+    init();
 
-    // // =================== PERFORMANCE OPTIMIZATION ===================
-    // // Debounce resize events
-    // let resizeTimer;
-    // window.addEventListener('resize', () => {
-    //     clearTimeout(resizeTimer);
-    //     resizeTimer = setTimeout(() => {
-    //         // Reinitialize certain effects on resize if needed
-    //         setupScrollReveal();
-    //     }, 250);
-    // });
+    // =================== PERFORMANCE OPTIMIZATION ===================
+    // Debounce resize events
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            // Reinitialize certain effects on resize if needed
+            setupScrollReveal();
+        }, 250);
+    });
 
     // // =================== EASTER EGG: KONAMI CODE ===================
     // let konamiCode = [];
