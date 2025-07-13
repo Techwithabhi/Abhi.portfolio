@@ -208,27 +208,27 @@ document.addEventListener('DOMContentLoaded', function() {
     //     setInterval(createParticle, 300);
     // }
 
-    // // =================== SCROLL REVEAL ANIMATION ===================
-    // function setupScrollReveal() {
-    //     const observerOptions = {
-    //         threshold: 0.1,
-    //         rootMargin: '0px 0px -50px 0px'
-    //     };
+    // =================== SCROLL REVEAL ANIMATION ===================
+    function setupScrollReveal() {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-    //     const observer = new IntersectionObserver((entries) => {
-    //         entries.forEach(entry => {
-    //             if (entry.isIntersecting) {
-    //                 entry.target.style.opacity = '1';
-    //                 entry.target.style.transform = 'translateY(0)';
-    //             }
-    //         });
-    //     }, observerOptions);
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
 
-    //     // Observe elements for scroll reveal
-    //     document.querySelectorAll('.text-data, .data-icon, .ending').forEach(el => {
-    //         observer.observe(el);
-    //     });
-    // }
+        // Observe elements for scroll reveal
+        document.querySelectorAll('.text-data, .data-icon, .ending').forEach(el => {
+            observer.observe(el);
+        });
+    }
 
     // // =================== DYNAMIC GRADIENT ANIMATION ===================
     // function animateGradient() {
