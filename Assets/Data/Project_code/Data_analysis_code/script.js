@@ -299,46 +299,46 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 250);
     });
 
-    // // =================== EASTER EGG: KONAMI CODE ===================
-    // let konamiCode = [];
-    // const konamiSequence = [
-    //     'ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
-    //     'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight',
-    //     'KeyB', 'KeyA'
-    // ];
+    // =================== EASTER EGG: KONAMI CODE ===================
+    let konamiCode = [];
+    const konamiSequence = [
+        'ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
+        'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight',
+        'KeyB', 'KeyA'
+    ];
 
-    // document.addEventListener('keydown', (e) => {
-    //     konamiCode.push(e.code);
-    //     if (konamiCode.length > konamiSequence.length) {
-    //         konamiCode.shift();
-    //     }
+    document.addEventListener('keydown', (e) => {
+        konamiCode.push(e.code);
+        if (konamiCode.length > konamiSequence.length) {
+            konamiCode.shift();
+        }
         
-    //     if (konamiCode.join('') === konamiSequence.join('')) {
-    //         // Easter egg activated!
-    //         const heading = document.querySelector('.heading');
-    //         heading.style.animation = 'rainbow 0.5s infinite';
+        if (konamiCode.join('') === konamiSequence.join('')) {
+            // Easter egg activated!
+            const heading = document.querySelector('.heading');
+            heading.style.animation = 'rainbow 0.5s infinite';
             
-    //         // Add rainbow animation
-    //         if (!document.getElementById('rainbow-animation')) {
-    //             const style = document.createElement('style');
-    //             style.id = 'rainbow-animation';
-    //             style.textContent = `
-    //                 @keyframes rainbow {
-    //                     0% { color: #ff0000; }
-    //                     16.66% { color: #ff8000; }
-    //                     33.33% { color: #ffff00; }
-    //                     50% { color: #00ff00; }
-    //                     66.66% { color: #0080ff; }
-    //                     83.33% { color: #8000ff; }
-    //                     100% { color: #ff0000; }
-    //                 }
-    //             `;
-    //             document.head.appendChild(style);
-    //         }
+            // Add rainbow animation
+            if (!document.getElementById('rainbow-animation')) {
+                const style = document.createElement('style');
+                style.id = 'rainbow-animation';
+                style.textContent = `
+                    @keyframes rainbow {
+                        0% { color: #ff0000; }
+                        16.66% { color: #ff8000; }
+                        33.33% { color: #ffff00; }
+                        50% { color: #00ff00; }
+                        66.66% { color: #0080ff; }
+                        83.33% { color: #8000ff; }
+                        100% { color: #ff0000; }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
             
-    //         setTimeout(() => {
-    //             heading.style.animation = '';
-    //         }, 3000);
-    //     }
-    // });
+            setTimeout(() => {
+                heading.style.animation = '';
+            }, 3000);
+        }
+    });
 });
