@@ -544,8 +544,10 @@ button:hover {
   overflow: hidden;
   border-radius: 25px;
   border: 3px solid #00fff7;
-  box-shadow: 0 0.1rem 0.2rem #00000033, 0 0.1rem 0.5rem #0000004d,
-              0 0.2rem 1.5rem #0000004d;
+  box-shadow: 
+  0 0.1rem 0.2rem #00000033, 
+  0 0.1rem 0.5rem #0000004d,
+  0 0.2rem 1.5rem #0000004d;
 }
 
 .img-wrapper img {
@@ -553,7 +555,7 @@ button:hover {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 5s ease;
+  transition: transform 9s ease;
 }
 
 .img-wrapper:hover img {
