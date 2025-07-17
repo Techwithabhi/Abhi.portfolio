@@ -120,7 +120,7 @@ body {
 
 /* 1ST DATA PERCENTAGE SECTION */
 .data-icon .data-box .percentage .left1 {
-    width: 75%;
+    width: 66%;
     height: 100%;
     background-color: rgb(13, 255, 0);
     border-right: 0.01px solid #868686;
@@ -134,7 +134,7 @@ body {
 
 /* 2ND DATA PERCENTAGE SECTION */
 .data-icon .data-box .percentage .left2 {
-    width: 91%;
+    width: 73%;
     height: 100%;
     background-color: rgb(13, 255, 0);
     border-right: 0.01px solid #868686;
@@ -148,7 +148,7 @@ body {
 
 /* 3RD DATA PERCENTAGE SECTION */
 .data-icon .data-box .percentage .left3 {
-    width: 54%;
+    width: 64%;
     height: 100%;
     background-color: rgb(13, 255, 0);
     border-right: 0.01px solid #868686;
@@ -162,7 +162,7 @@ body {
 
 /* 4TH DATA PERCENTAGE SECTION */
 .data-icon .data-box .percentage .left4 {
-    width: 71%;
+    width: 51%;
     height: 100%;
     background-color: rgb(13, 255, 0);
     border-right: 0.01px solid #868686;
@@ -176,7 +176,7 @@ body {
 
 /* 5TH DATA PERCENTAGE SECTION */
 .data-icon .data-box .percentage .left5 {
-    width: 82%;
+    width: 72%;
     height: 100%;
     background-color: rgb(13, 255, 0);
     border-right: 0.01px solid #868686;
