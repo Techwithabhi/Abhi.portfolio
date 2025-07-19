@@ -206,6 +206,7 @@ header {
   .profile-img {
     width: 120px;
     height: 120px;
+    border: 1.7px solid #46fff6;
   }
 }
 
@@ -429,7 +430,7 @@ header {
 /* Responsive Styles for All Sections */
 @media only screen and (min-width: 0px) and (max-width: 400px) {
   .tools div img,
-  .ai-tools div img,
+  .ai div img,
   .language div img {
     width: 40px;
   }
@@ -437,7 +438,7 @@ header {
 
 @media only screen and (min-width: 401px) and (max-width: 750px) {
   .tools div img,
-  .ai-tools div img,
+  .ai div img,
   .language div img {
     width: 60px;
   }
