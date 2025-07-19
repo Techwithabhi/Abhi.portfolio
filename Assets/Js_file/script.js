@@ -112,16 +112,20 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const icons = document.querySelectorAll(".tools img, .language img");
+  // Select all icons in the tools, AI tools, and language sections
+  const icons = document.querySelectorAll(
+    ".tools img, .ai img, .language img"
+  );
 
-  // Create tooltips and attach hover events
   icons.forEach((icon) => {
-    const tooltipText = icon.alt || "Technology"; // Use alt text as tooltip
+    const tooltipText = icon.alt || "Technology";
     const tooltip = document.createElement("span");
     tooltip.className = "custom-tooltip";
     tooltip.innerText = tooltipText;
-    icon.parentElement.style.position = "relative";
-    icon.parentElement.appendChild(tooltip);
+
+    const parent = icon.closest("div");
+    parent.style.position = "relative";
+    parent.appendChild(tooltip);
 
     icon.addEventListener("mouseenter", () => {
       tooltip.style.opacity = 1;
@@ -133,14 +137,13 @@ document.addEventListener("DOMContentLoaded", () => {
       tooltip.style.transform = "translateY(0)";
     });
 
-    // On click: show more info or modal (expandable behavior)
     icon.addEventListener("click", () => {
       alert(`You clicked on ${tooltipText}`);
-      // You can enhance this with a modal or description popup
+      // Replace alert with modal or info box logic if needed
     });
   });
 
-  // Fade in on scroll (intersection observer)
+  // Scroll fade-in animation using IntersectionObserver
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -157,4 +160,3 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(icon);
   });
 });
-
